@@ -6,24 +6,9 @@ import numpy as np
 import read_json as rj
 import collections
 
+
 with np.errstate(divide='ignore'):
 	np.float64(1.0) / 0.0
-
-# def kolgomorov_smirnov_test(y, y_fitted):
-# 	'''original_data, fitted_data'''
-# 	return stats.ks_2samp(y, y_fitted)
-#
-# def choose_best_fit():
-# 	print "fit"
-#
-# def param_dist(dist, param):
-#
-#/
-#
-# def fit(y, dist_name, par_name):
-# 	dist = getattr(scipy.stats, dist_name)
-# 	param = dist.fit(y)
-# 	y_fitted = dist.rvs(*param[:-2], loc=param[-2], scale=param[-1], size=len(y))
 
 def fitting(y, dist_name,par):
 	dist = getattr(scipy.stats, dist_name)
@@ -76,30 +61,6 @@ print "**********************\n************************\n***********************
 print trade_b_time,"     "#,trade_s_time
 
 
-
-# plot_dis(buy_time,'buy_time')
-# plot_dis(buy_size,'Limit Buy Size')
-
-# plot_dis(sell_time,'ell_time')
-# plot_dis(sell_size,'Limit Sell Size')
-
-# plot_dis(buy_c_time,'y_c_time')
-# plot_dis(buy_c_size,'Limit Buy Cancel Size')
-
-# plot_dis(sell_c_time,'l_c_time')
-# plot_dis(sell_c_size,'Limit Sell Cancel Size')
-
-# plot_dis(trade_b_time,'e_b_size')
-# plot_dis(trade_s_time,'e_s_size')
-# plot_dis(trade_s_volume,'Trade Sell Volume')
-# plot_dis(trade_b_volume,'Trade Buy Volume')
-
-# plot_dis(buy_price,'Limit Buy Price')
-# plot_dis(sell_price,'Limit Sell Price')
-# plot_dis(buy_c_price,'Limit Buy Cancel Price')
-# plot_dis(sell_c_price,'Limit Sell Cancel Price')
-# plot_dis(trade_b_price,'Trade Buy Price')
-# plot_dis(trade_s_price,'Trade Sell Price')
 def merge_dicts(*dict_args):
     '''
     Given any number of dicts, shallow copy and merge into a new dict,
